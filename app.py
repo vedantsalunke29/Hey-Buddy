@@ -32,10 +32,10 @@ class MusicController:
             try:
                 with sr.Microphone() as source:
                     self.recognizer.adjust_for_ambient_noise(source, duration=0.5)
-                    print("Listening for 'Hi Buddy'...")
+                    print("Listening for 'Hey Buddy'...")
                     audio = self.recognizer.listen(source, phrase_time_limit=3)
                     text = self.recognizer.recognize_google(audio).lower()
-                    return "hi buddy" in text
+                    return "hey buddy" in text
             except (sr.UnknownValueError, sr.WaitTimeoutError):
                 print("Didn't catch that, try again...")
                 return False
