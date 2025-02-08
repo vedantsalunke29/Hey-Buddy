@@ -1,2 +1,4 @@
 .api_keys
 venv
+
+.DS_Store
